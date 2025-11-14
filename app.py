@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 
 import plotly.express  as px
+import plotly.graph_objects as go
 
 #--Page configuration---
 st.set_page_config(
@@ -697,5 +698,6 @@ Encourage the use of AI assisted monitoring, predictive maintenance, advanced we
 Greater transparency and real time diagnostics help prevent incidents before they occur.
 
 """)
+
 
 
