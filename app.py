@@ -415,7 +415,6 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 #   RESEARCH QUESTION 8
-import plotly.graph_objects as go
 
 st.markdown("### **8. What share of total survivors came from each continent?**")
 
@@ -698,6 +697,7 @@ Encourage the use of AI assisted monitoring, predictive maintenance, advanced we
 Greater transparency and real time diagnostics help prevent incidents before they occur.
 
 """)
+
 
 
 
