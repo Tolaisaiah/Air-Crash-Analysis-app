@@ -15,21 +15,9 @@ st.set_page_config(
 # --- CUSTOM STYLES ---
 st.markdown("""
     <style>
-        .main {
-    background-color: #1C1F26;   /* Clean Aviation Dark Slate */
-}
-
-/* Metric Cards */
-.stMetric {
-    background-color: white;
-    border-radius: 15px;
-    padding: 10px;
-}
-
-/* Header Colors */
-h1, h2, h3, h4 {
-    color: #1f3c88;   /* Deep Royal Blue */
-}
+        .main {background-color:#(#1f1f2e;}
+        .stMetric {background-color:white; border-radius:15px; padding:10px;}
+        h1, h2, h3, h4 {color:#1f3c88;}
     </style>
 """, unsafe_allow_html=True)
 
@@ -46,7 +34,7 @@ st.caption("Analyze aviation accident patterns, fatalities, and historical trend
 st.sidebar.markdown("""
     <style>
         [data-testid="stSidebar"] {
-            background-color: #1C1F26;   /* Aviation Dark Slate */
+            background-color: #D3D3D3; /* Aviation Dark Slate */
         }
     </style>
 """, unsafe_allow_html=True)
@@ -709,6 +697,7 @@ Encourage the use of AI assisted monitoring, predictive maintenance, advanced we
 Greater transparency and real time diagnostics help prevent incidents before they occur.
 
 """)
+
 
 
 
