@@ -34,7 +34,7 @@ st.caption("Analyze aviation accident patterns, fatalities, and historical trend
 st.sidebar.markdown("""
     <style>
         [data-testid="stSidebar"] {
-            background-color: #D3D3D3;   /* Aviation Dark Slate */
+            background-color: #1C1F26;   /* Aviation Dark Slate */
         }
     </style>
 """, unsafe_allow_html=True)
@@ -697,6 +697,7 @@ Encourage the use of AI assisted monitoring, predictive maintenance, advanced we
 Greater transparency and real time diagnostics help prevent incidents before they occur.
 
 """)
+
 
 
 
