@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 
 import plotly.express as px
+
 import plotly.graph_objects as go
 
 #--Page configuration---
@@ -34,7 +35,7 @@ st.caption("Analyze aviation accident patterns, fatalities, and historical trend
 st.sidebar.markdown("""
     <style>
         [data-testid="stSidebar"] {
-            background-color: #D3D3D3; /* Aviation Dark Slate */
+            background-color: #D3D3D3;   /* Aviation Dark Slate */
         }
     </style>
 """, unsafe_allow_html=True)
@@ -157,10 +158,9 @@ for col, kpi in zip(cols, kpis_filtered):
 
 
 
-# Research questions
+# Analysis
 
-st.markdown("## 📘 Research Questions")
-st.markdown("### **1. How have global air crashes changed over time (1908–2024)?**")
+st.markdown("### How have global air crashes changed over time (1908–2024)?")
 
 # Group by Year
 yearly_trend = df.groupby("Year").size().reset_index(name="Crash_Count")
@@ -189,9 +189,8 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-# Research question 2
 
-st.markdown("### **2. Which years recorded the highest number of air crashes and fatalities?**")
+st.markdown("### Which years recorded the highest number of air crashes and fatalities?")
 
 # --- Prepare Data ---
 yearly_summary = df.groupby("Year").agg(
@@ -228,9 +227,8 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 
-# Research question 3
 
-st.markdown("### 3. Top 10 Aircraft Manufacturers by Air Fatalities")
+st.markdown("###  Top 10 Aircraft Manufacturers by Air Fatalities")
 
 # Use filtered data
 data = filtered_df.copy()
@@ -269,9 +267,8 @@ fig.update_traces(texttemplate='%{text}', textposition='outside')
 st.plotly_chart(fig, use_container_width=True)
 
 
-# Research question 4
 
-st.markdown("### **4. Which countries have recorded the highest number of air crashes?**")
+st.markdown("### Which countries have recorded the highest number of air crashes?")
 
 # Group by country
 country_crashes = df.groupby("Country/Region").size().reset_index(name="Crash_Count")
@@ -301,10 +298,9 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-#   RESEARCH QUESTION 5
 
 
-st.markdown("### **5. How do air crash patterns differ by continent?**")
+st.markdown("### How do air crash patterns differ by continent?")
 
 data = filtered_df  
 
@@ -337,8 +333,8 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-#   RESEARCH QUESTION 6
-st.markdown("### **6. Which aircraft types were most involved in crashes?**")
+
+st.markdown("### Which aircraft types were most involved in crashes?")
 
 data = filtered_df     
 
@@ -371,9 +367,7 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 
-#  RESEARCH QUESTION 7
-
-st.markdown("### **7. What is the trend of air fatalities and survivors by quarter?**")
+st.markdown("### What is the trend of air fatalities and survivors by quarter?")
 #  USE FILTERED DATA
 data = filtered_df.copy()
 
@@ -414,9 +408,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 
-#   RESEARCH QUESTION 8
-
-st.markdown("### **8. What share of total survivors came from each continent?**")
+st.markdown("### What share of total survivors came from each continent?")
 
 #  FILTERED DATA
 data = filtered_df.copy()
@@ -462,9 +454,7 @@ fig_survivors.update_layout(
 st.plotly_chart(fig_survivors, use_container_width=True)
 
 
-# Research Question 9
-
-st.markdown("### 9. Moving average of survivors for Top 5 aircraft manufacturers over time")
+st.markdown("### Moving average of survivors for Top 5 aircraft manufacturers over time")
 
 # Filtered data
 data = filtered_df.copy()
@@ -531,8 +521,8 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-# Question 11
-st.markdown("### **10. How does the air-crash survival rate vary across countries?**")
+
+st.markdown("### How does the air-crash survival rate vary across countries?")
 
 data = filtered_df.copy()
 
@@ -676,7 +666,7 @@ Based on over a century of air crash data, the following five recommendations re
 
 
  **1. Modernize and Replace Aging Aircraft Fleets**
-Retire older aircraft models especially legacy types such as DC series, early Boeing models, and aging Soviet era aircraft.  
+Retire older aircraft models especially legacy types such as DC-series, early Boeing models, and aging Soviet era aircraft.  
 Invest in modern fleets equipped with advanced avionics, improved structural integrity, and real time safety monitoring systems.
 
 
@@ -697,12 +687,5 @@ Encourage the use of AI assisted monitoring, predictive maintenance, advanced we
 Greater transparency and real time diagnostics help prevent incidents before they occur.
 
 """)
-
-
-
-
-
-
-
 
 
